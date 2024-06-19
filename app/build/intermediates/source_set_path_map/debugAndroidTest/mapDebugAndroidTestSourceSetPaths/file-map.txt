@@ -1,0 +1,4 @@
+com.empatica.sample.test.app-androidTest-0 C:\Users\Name\Desktop\e4link\app\build\generated\res\resValues\androidTest\debug
+com.empatica.sample.test.app-mergeDebugAndroidTestResources-1 C:\Users\Name\Desktop\e4link\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.empatica.sample.test.app-mergeDebugAndroidTestResources-2 C:\Users\Name\Desktop\e4link\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.empatica.sample.test.app-debugAndroidTest-3 C:\Users\Name\Desktop\e4link\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

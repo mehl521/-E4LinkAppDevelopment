@@ -1,0 +1,13 @@
+com.empatica.sample.app-cardview-1.0.0-0 C:\Users\catuseradmin\.gradle\caches\transforms-4\143add46293f07cffc93c4c9bcddcd28\transformed\cardview-1.0.0\res
+com.empatica.sample.app-jetified-annotation-experimental-1.1.0-1 C:\Users\catuseradmin\.gradle\caches\transforms-4\1bf08dc621f25db6b1b6689999e18a7a\transformed\jetified-annotation-experimental-1.1.0\res
+com.empatica.sample.app-jetified-E4link-1.0.0-2 C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\res
+com.empatica.sample.app-appcompat-1.2.0-3 C:\Users\catuseradmin\.gradle\caches\transforms-4\3d7d3a506411a46d3994cbaf3a3855fd\transformed\appcompat-1.2.0\res
+com.empatica.sample.app-core-1.6.0-4 C:\Users\catuseradmin\.gradle\caches\transforms-4\a2fdcd1422557c16bf68b08a41f492b6\transformed\core-1.6.0\res
+com.empatica.sample.app-jetified-appcompat-resources-1.2.0-5 C:\Users\catuseradmin\.gradle\caches\transforms-4\b40ec6babd5e95ecaf21f921b597868f\transformed\jetified-appcompat-resources-1.2.0\res
+com.empatica.sample.app-pngs-6 C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\build\generated\res\pngs\debug
+com.empatica.sample.app-resValues-7 C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\build\generated\res\resValues\debug
+com.empatica.sample.app-mergeDebugResources-8 C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.empatica.sample.app-mergeDebugResources-9 C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.empatica.sample.app-debug-10 C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.empatica.sample.app-debug-11 C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\debug\res
+com.empatica.sample.app-main-12 C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\res
