@@ -1,0 +1,215 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:1:1-53:12
+INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:1:1-53:12
+INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:1:1-53:12
+INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:1:1-53:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3d7d3a506411a46d3994cbaf3a3855fd\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\143add46293f07cffc93c4c9bcddcd28\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\50cb7526a6ccf92e462136901a768951\transformed\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\01ac314b920a7828beeb843acb65d5c7\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\b40ec6babd5e95ecaf21f921b597868f\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\f7fce2ef049dd1e97efe249e4ac345cc\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\930c47526e89208996ecd1480acdacde\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\e2f19c8bdd61884fc1ed992b163cf292\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\5df53af6de09ce2c4c46b1eaaec81082\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\f8d0dccd49cd0576e1ffb37ed01951fb\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\582f4658c3093bceb1f32ec22bdc395a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\bee822ea16078e16cc546dcf334a0594\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\a2fdcd1422557c16bf68b08a41f492b6\transformed\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\174271169952cf08952d88bebce68889\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\catuseradmin\.gradle\caches\transforms-4\4c4a086408b5c0dab0421d8d394b00e2\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\79b8abd0c2d1464c785f045867268605\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\854a47ae95582a6d54f2aa9642909026\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\c302c8755865b4d5de0a78b9ada1b37a\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\7a62dc715d4c2782c35a442f51ba2f07\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\83ef129d620910de5f7d588c8dc32cfb\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\6f7d656cc38c17cc3ce7076e76e20095\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\96c3f4e9f16f73a5722d4a23595f31cc\transformed\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\1bf08dc621f25db6b1b6689999e18a7a\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+	package
+		INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:3:5-80
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:3:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:4:5-78
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:4:22-76
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:5:5-88
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:5:22-86
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:8:5-66
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:13:5-67
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:13:5-67
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:8:22-64
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:11:5-67
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:11:5-68
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:11:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:12:5-73
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:12:5-74
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:12:22-71
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:13:5-75
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:13:22-73
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:14:5-72
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:14:22-70
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:19:5-80
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:19:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:20:22-77
+uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:21:5-81
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:21:22-79
+uses-permission#android.permission.READ_MEDIA_IMAGES
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:24:5-75
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:24:22-73
+uses-permission#android.permission.READ_MEDIA_AUDIO
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:25:5-74
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:25:22-72
+uses-permission#android.permission.READ_MEDIA_VIDEO
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:26:5-74
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:26:22-72
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:29:5-76
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:29:22-74
+application
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:31:5-52:19
+INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:31:5-52:19
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:19:5-24:19
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:19:5-24:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\a2fdcd1422557c16bf68b08a41f492b6\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\a2fdcd1422557c16bf68b08a41f492b6\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\catuseradmin\.gradle\caches\transforms-4\4c4a086408b5c0dab0421d8d394b00e2\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\catuseradmin\.gradle\caches\transforms-4\4c4a086408b5c0dab0421d8d394b00e2\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\a2fdcd1422557c16bf68b08a41f492b6\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:34:9-41
+	android:icon
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:33:9-43
+	android:allowBackup
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:32:9-35
+	android:theme
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:35:9-40
+activity#com.empatica.sample.MainActivity
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:38:9-47:20
+	android:screenOrientation
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:41:13-49
+	android:label
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:40:13-45
+	android:exported
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:42:13-36
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:39:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:43:13-46:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:44:17-68
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:44:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:45:17-76
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:45:27-74
+activity#com.empatica.sample.HeartRateChartActivity
+ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:50:9-60
+	android:name
+		ADDED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:50:19-57
+uses-sdk
+INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3d7d3a506411a46d3994cbaf3a3855fd\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3d7d3a506411a46d3994cbaf3a3855fd\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\143add46293f07cffc93c4c9bcddcd28\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\143add46293f07cffc93c4c9bcddcd28\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\50cb7526a6ccf92e462136901a768951\transformed\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\50cb7526a6ccf92e462136901a768951\transformed\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\01ac314b920a7828beeb843acb65d5c7\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\01ac314b920a7828beeb843acb65d5c7\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\b40ec6babd5e95ecaf21f921b597868f\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\b40ec6babd5e95ecaf21f921b597868f\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\f7fce2ef049dd1e97efe249e4ac345cc\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\f7fce2ef049dd1e97efe249e4ac345cc\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\930c47526e89208996ecd1480acdacde\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\930c47526e89208996ecd1480acdacde\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\e2f19c8bdd61884fc1ed992b163cf292\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\e2f19c8bdd61884fc1ed992b163cf292\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\5df53af6de09ce2c4c46b1eaaec81082\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\5df53af6de09ce2c4c46b1eaaec81082\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\f8d0dccd49cd0576e1ffb37ed01951fb\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\f8d0dccd49cd0576e1ffb37ed01951fb\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\582f4658c3093bceb1f32ec22bdc395a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\582f4658c3093bceb1f32ec22bdc395a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\bee822ea16078e16cc546dcf334a0594\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\bee822ea16078e16cc546dcf334a0594\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\a2fdcd1422557c16bf68b08a41f492b6\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\a2fdcd1422557c16bf68b08a41f492b6\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\174271169952cf08952d88bebce68889\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\174271169952cf08952d88bebce68889\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\catuseradmin\.gradle\caches\transforms-4\4c4a086408b5c0dab0421d8d394b00e2\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\catuseradmin\.gradle\caches\transforms-4\4c4a086408b5c0dab0421d8d394b00e2\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\79b8abd0c2d1464c785f045867268605\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\79b8abd0c2d1464c785f045867268605\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\854a47ae95582a6d54f2aa9642909026\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\854a47ae95582a6d54f2aa9642909026\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\c302c8755865b4d5de0a78b9ada1b37a\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\c302c8755865b4d5de0a78b9ada1b37a\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\7a62dc715d4c2782c35a442f51ba2f07\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\7a62dc715d4c2782c35a442f51ba2f07\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\83ef129d620910de5f7d588c8dc32cfb\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\83ef129d620910de5f7d588c8dc32cfb\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\6f7d656cc38c17cc3ce7076e76e20095\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\6f7d656cc38c17cc3ce7076e76e20095\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\96c3f4e9f16f73a5722d4a23595f31cc\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\96c3f4e9f16f73a5722d4a23595f31cc\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\1bf08dc621f25db6b1b6689999e18a7a\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\1bf08dc621f25db6b1b6689999e18a7a\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+	android:targetSdkVersion
+		INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml
+uses-feature#android.hardware.bluetooth_le
+ADDED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:15:5-17:35
+	android:required
+		ADDED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:17:9-32
+	android:name
+		ADDED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:16:9-53
+service#com.empatica.empalink.EmpaLinkBLE
+ADDED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:23:9-69
+	android:name
+		ADDED from [com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:23:18-66
