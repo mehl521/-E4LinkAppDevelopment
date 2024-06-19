@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#338C76FF</color> <!-- replace with your primary color -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- replace with your primary dark color -->
+    <color name="colorAccent">#80c4b7</color> <!-- replace with your accent color -->
+    <color name="cardview_light_background">#FFFFFF</color> <!-- replace with your preferred color -->
+    <color name="peach">#FFe3856b</color>
+    <color name="darkred">#90754b64</color>
+    <color name="background">#88edcbd2</color>
+    <color name="background1">#ff6965</color>
+    <color name="colorBVP">#FF0000</color> <!-- Red color for BVP -->
+    <color name="colorEDA">#00FF00</color> <!-- Green color for EDA -->
+    <color name="colorHR">#338C76FF</color> <!-- Blue color for HR -->
+    <color name="colorRespiration">#80c4b7</color> <!-- Blue color for respiration -->
+    <color name="colorBPSystolic">#FFe3856b</color> <!-- Red color for -->
+    <color name="colorBPDiastolic">#ff6965</color> <!-- Green color for  blood pressure-->
+
+    <!-- add other color resources here -->
+</resources>
