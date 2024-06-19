@@ -1,0 +1,126 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.empatica.empalinksample"
+4    android:versionCode="2323"
+5    android:versionName="1.2" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+9        android:targetSdkVersion="33" />
+10    <!-- Permissions for location access -->
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:3:5-80
+11-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:3:22-78
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:4:5-78
+12-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:4:22-76
+13    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+13-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:5:5-88
+13-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:5:22-86
+14
+15    <!-- Permissions for internet access -->
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:8:5-66
+16-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:8:22-64
+17
+18    <!-- Permissions for Bluetooth access -->
+19    <uses-permission android:name="android.permission.BLUETOOTH" />
+19-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:11:5-67
+19-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:11:22-65
+20    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+20-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:12:5-73
+20-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:12:22-71
+21    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+21-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:13:5-75
+21-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:13:22-73
+22    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+22-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:14:5-72
+22-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:14:22-70
+23    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+23-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:4:5-78
+23-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:4:22-76
+24
+25    <!-- Permissions for accessing and managing external storage -->
+26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+26-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:19:5-80
+26-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:19:22-78
+27    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+27-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:20:5-79
+27-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:20:22-77
+28    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+28-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:21:5-81
+28-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:21:22-79
+29
+30    <!-- Permissions for reading media files -->
+31    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+31-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:24:5-75
+31-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:24:22-73
+32    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+32-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:25:5-74
+32-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:25:22-72
+33    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+33-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:26:5-74
+33-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:26:22-72
+34
+35    <!-- Permission for foreground service -->
+36    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+36-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:29:5-76
+36-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:29:22-74
+37
+38    <uses-feature
+38-->[com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:15:5-17:35
+39        android:name="android.hardware.bluetooth_le"
+39-->[com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:16:9-53
+40        android:required="true" />
+40-->[com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:17:9-32
+41
+42    <application
+42-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:31:5-52:19
+43        android:allowBackup="true"
+43-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:32:9-35
+44        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+44-->[androidx.core:core:1.6.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\a2fdcd1422557c16bf68b08a41f492b6\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+45        android:debuggable="true"
+46        android:extractNativeLibs="true"
+47        android:icon="@mipmap/ic_launcher"
+47-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:33:9-43
+48        android:label="@string/app_name"
+48-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:34:9-41
+49        android:testOnly="true"
+50        android:theme="@style/AppTheme" >
+50-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:35:9-40
+51
+52        <!-- MainActivity declaration -->
+53        <activity
+53-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:38:9-47:20
+54            android:name="com.empatica.sample.MainActivity"
+54-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:39:13-41
+55            android:exported="true"
+55-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:42:13-36
+56            android:label="@string/app_name"
+56-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:40:13-45
+57            android:screenOrientation="portrait" >
+57-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:41:13-49
+58            <intent-filter>
+58-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:43:13-46:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:44:17-68
+59-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:44:25-66
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:45:17-76
+61-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:45:27-74
+62            </intent-filter>
+63        </activity>
+64
+65        <!-- HeartRateChartActivity declaration -->
+66        <activity android:name="com.empatica.sample.HeartRateChartActivity" />
+66-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:50:9-60
+66-->C:\Users\catuseradmin\Desktop\e4link_17_06_ziti\app\src\main\AndroidManifest.xml:50:19-57
+67
+68        <service android:name="com.empatica.empalink.EmpaLinkBLE" />
+68-->[com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:23:9-69
+68-->[com.empatica.empalink:E4link:1.0.0] C:\Users\catuseradmin\.gradle\caches\transforms-4\3996c7abb9c3420c0562529fc5f857a9\transformed\jetified-E4link-1.0.0\AndroidManifest.xml:23:18-66
+69    </application>
+70
+71</manifest>
