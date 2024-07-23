@@ -2,28 +2,29 @@ package com.empatica.sample;
 
 import android.os.Build;
 import android.util.Log;
-import org.apache.commons.math3.complex.Complex;
+
 import org.apache.commons.math3.transform.DftNormalization;
 import org.apache.commons.math3.transform.FastFourierTransformer;
-import org.apache.commons.math3.transform.TransformType;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class RespiratoryRateCalculator {
-    private static final int BUFFER_SIZE = 256;
+    private static final int BUFFER_SIZE = 64 * 20;
     private double[] bvpDataBuffer = new double[BUFFER_SIZE];
     private int bufferIndex = 0;
-    private FastFourierTransformer transformer = new FastFourierTransformer(DftNormalization.STANDARD);
+    private final FastFourierTransformer transformer = new FastFourierTransformer(DftNormalization.STANDARD);
     private float respiratoryRate = 0.0f;
     private boolean ready = false;
     private final Lock bufferLock = new ReentrantLock();
 
     // Constants for signal processing
-    private static final double LOW_RR_FREQ = 0.2;   // ~12 breaths per minute
+    private static final double LOW_RR_FREQ = 0.1;   // ~6 breaths per minute
     private static final double HIGH_RR_FREQ = 0.5;  // ~30 breaths per minute
-    private static final double SAMPLING_RATE = 125.0; // Assuming 64Hz
+    private static final double SAMPLING_RATE = 64.0; // Assuming 64Hz
 
     // Butterworth filter instance for respiratory rate
     private ButterworthFilter rrFilter = new ButterworthFilter(LOW_RR_FREQ, HIGH_RR_FREQ, SAMPLING_RATE, 2);
@@ -49,93 +50,138 @@ public class RespiratoryRateCalculator {
     //Calculates the respiratory rate from the buffered BVP data.
     private void calculateRespiratoryRate() {
         try {
-            // Apply Butterworth filter to the data
+            // Apply Butterworth band-pass filter to the data
             double[] filteredData = rrFilter.filter(Arrays.copyOf(bvpDataBuffer, BUFFER_SIZE));
 
+            // Peak and Trough Detection with criteria
+            List<Integer> peakIndices = detectPeaks(filteredData);
+            List<Integer> troughIndices = detectTroughs(filteredData);
+            peakIndices = filterPeaksAndTroughs(filteredData, peakIndices, true);
+            troughIndices = filterPeaksAndTroughs(filteredData, troughIndices, false);
+
             // Feature Extraction
-            double am = calculateAmplitudeModulation(filteredData);
-            double bw = calculateBaselineWander(filteredData);
-            double fm = calculateFrequencyModulation(filteredData);
+            double am = calculateAmplitudeModulation(filteredData, peakIndices, troughIndices);
+            double bw = calculateBaselineWander(filteredData, peakIndices, troughIndices);
+            double fm = calculateFrequencyModulation(peakIndices);
 
             Log.d("RespiRateCalculator", "AM: " + am + ", BW: " + bw + ", FM: " + fm);
 
-            // Perform FFT on the filtered data
-            Complex[] fftResult = transformer.transform(filteredData, TransformType.FORWARD);
-            double[] magnitudes = new double[fftResult.length / 2];
-            for (int i = 0; i < magnitudes.length; i++) {
-                magnitudes[i] = fftResult[i].abs();
-            }
+            // Respiratory Rate Estimation using Count-orig Method
+            float countOrigRR = countOrigMethod(filteredData, peakIndices);
 
-            // Identify the dominant frequency within the respiratory rate range
-            int lowIndex = (int) Math.round(LOW_RR_FREQ * filteredData.length / SAMPLING_RATE);
-            int highIndex = (int) Math.round(HIGH_RR_FREQ * filteredData.length / SAMPLING_RATE);
+            // Fusion of features
+            respiratoryRate = fuseFeatures(am, bw, fm, countOrigRR);
 
-            double maxMagnitude = 0;
-            int maxIndex = -1;
-            for (int i = lowIndex; i <= highIndex; i++) {
-                if (i < magnitudes.length && magnitudes[i] > maxMagnitude) {
-                    maxMagnitude = magnitudes[i];
-                    maxIndex = i;
-                }
-            }
-
-            // Calculate respiratory rate from the dominant frequency
-            if (maxIndex != -1) {
-                double dominantFreq = maxIndex * SAMPLING_RATE / (double) filteredData.length;
-                float fftRR = (float) (dominantFreq * 60); // Convert to breaths per minute
-
-                // Fusion of features
-                respiratoryRate = fuseFeatures(am, bw, fm, fftRR);
-
-                // Validate the calculated respiratory rate
-                if (respiratoryRate < 12 || respiratoryRate > 50) {
-                    Log.w("RespiRateCalculator", "Calculated respiratory rate out of realistic range: " + respiratoryRate);
-                    respiratoryRate = 0.0f; // Set to 0 if the calculated rate is unrealistic
-                }
-            } else {
-                Log.w("RespiRateCalculator", "No dominant frequency found in the respiratory rate range");
-                respiratoryRate = 0.0f;
-            }
         } catch (Exception e) {
             Log.e("RespiRateCalculator", "Error calculating respiratory rate", e);
             respiratoryRate = 0.0f;
         }
     }
 
-    //Calculates amplitude modulation from the data.
-    private double calculateAmplitudeModulation(double[] data) {
-        double max = 0;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            max = Arrays.stream(data).max().orElse(0.0);
+    // Detects peaks in the data.
+    private List<Integer> detectPeaks(double[] data) {
+        List<Integer> peakIndices = new ArrayList<>();
+        for (int i = 1; i < data.length - 1; i++) {
+            if (data[i] > data[i - 1] && data[i] > data[i + 1]) {
+                peakIndices.add(i);
+            }
         }
-        double min = 0;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            min = Arrays.stream(data).min().orElse(0.0);
-        }
-        return max - min;
+        return peakIndices;
     }
 
-    // Calculates baseline wander from the data.
-    private double calculateBaselineWander(double[] data) {
+    // Detects troughs in the data.
+    private List<Integer> detectTroughs(double[] data) {
+        List<Integer> troughIndices = new ArrayList<>();
+        for (int i = 1; i < data.length - 1; i++) {
+            if (data[i] < data[i - 1] && data[i] < data[i + 1]) {
+                troughIndices.add(i);
+            }
+        }
+        return troughIndices;
+    }
+
+    // Filters peaks and troughs based on criteria.
+    private List<Integer> filterPeaksAndTroughs(double[] data, List<Integer> indices, boolean isPeak) {
+        double mean = Arrays.stream(data).average().orElse(0.0);
+        double minInterval = 0.4 * SAMPLING_RATE;
+
+        List<Integer> filteredIndices = new ArrayList<>();
+        for (int i = 0; i < indices.size(); i++) {
+            if ((isPeak && data[indices.get(i)] > mean) || (!isPeak && data[indices.get(i)] < mean)) {
+                if (filteredIndices.isEmpty() || indices.get(i) - filteredIndices.get(filteredIndices.size() - 1) > minInterval) {
+                    filteredIndices.add(indices.get(i));
+                }
+            }
+        }
+        return filteredIndices;
+    }
+
+    //Calculates amplitude modulation from the peaks and troughs.
+    private double calculateAmplitudeModulation(double[] data, List<Integer> peaks, List<Integer> troughs) {
+        double amSum = 0.0;
+        int count = 0;
+        for (int i = 0; i < Math.min(peaks.size(), troughs.size()); i++) {
+            amSum += Math.abs(data[peaks.get(i)] - data[troughs.get(i)]);
+            count++;
+        }
+        return count == 0 ? 0 : amSum / count;
+    }
+
+    // Calculates baseline wander from the peaks and troughs.
+    private double calculateBaselineWander(double[] data, List<Integer> peaks, List<Integer> troughs) {
+        double bwSum = 0.0;
+        int count = 0;
+        for (int i = 0; i < Math.min(peaks.size(), troughs.size()); i++) {
+            bwSum += (data[peaks.get(i)] + data[troughs.get(i)]) / 2.0;
+            count++;
+        }
+        return count == 0 ? 0 : bwSum / count;
+    }
+
+    // Calculates frequency modulation from the peaks.
+    private double calculateFrequencyModulation(List<Integer> peaks) {
+        if (peaks.size() < 2) return 0;
+        double[] intervals = new double[peaks.size() - 1];
+        for (int i = 1; i < peaks.size(); i++) {
+            intervals[i - 1] = peaks.get(i) - peaks.get(i - 1);
+        }
+        double meanInterval = 0;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return Arrays.stream(data).average().orElse(0.0);
+            meanInterval = Arrays.stream(intervals).average().orElse(0.0);
         }
-        return 0;
+        double variance = 0.0;
+        for (double interval : intervals) {
+            variance += Math.pow(interval - meanInterval, 2);
+        }
+        variance /= intervals.length;
+        return Math.sqrt(variance);
     }
 
-    // Calculates frequency modulation from the data.
-    private double calculateFrequencyModulation(double[] data) {
-        double mean;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            mean = Arrays.stream(data).average().orElse(0.0);
-        } else {
-            mean = 0;
+    // Count-orig method for respiratory rate estimation.
+    private float countOrigMethod(double[] data, List<Integer> peaks) {
+        // Define threshold as 0.2 times the 75th percentile of peak values
+        double threshold = 0.2 * percentile(peaks);
+        int validBreaths = 0;
+
+        for (int i = 1; i < peaks.size(); i++) {
+            if (data[peaks.get(i)] > threshold && data[peaks.get(i - 1)] > threshold) {
+                validBreaths++;
+            }
         }
-        double variance = 0;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            variance = Arrays.stream(data).map(d -> Math.pow(d - mean, 2)).sum() / data.length;
+
+        double durationInMinutes = (double) data.length / SAMPLING_RATE / 60.0;
+        return (float) (validBreaths / durationInMinutes);
+    }
+
+    // Helper method to calculate the nth percentile
+    private double percentile(List<Integer> peaks) {
+        double[] values = new double[peaks.size()];
+        for (int i = 0; i < peaks.size(); i++) {
+            values[i] = bvpDataBuffer[peaks.get(i)];
         }
-        return Math.sqrt(variance);
+        Arrays.sort(values);
+        int index = (int) Math.ceil(75 / 100.0 * values.length);
+        return values[Math.min(index, values.length - 1)];
     }
 
     /**
@@ -144,20 +190,19 @@ public class RespiratoryRateCalculator {
      * @param am    amplitude modulation
      * @param bw    baseline wander
      * @param fm    frequency modulation
-     * @param fftRR respiratory rate from FFT
+     * @param countOrigRR respiratory rate from count-orig method
      * @return the fused respiratory rate
      */
-    private float fuseFeatures(double am, double bw, double fm, float fftRR) {
+    private float fuseFeatures(double am, double bw, double fm, float countOrigRR) {
         // Example weights for each feature
-        double weightAM = 0.3;
+        double weightAM = 0.5;
         double weightBW = 0.2;
         double weightFM = 0.2;
-        double weightFFT = 0.3;
+        double weightCountOrig = 0.1;
 
         // Weighted fusion
-        return (float) ((weightAM * am) + (weightBW * bw) + (weightFM * fm) + (weightFFT * fftRR));
+        return (float) ((weightAM * am) + (weightBW * bw) + (weightFM * fm) + (weightCountOrig * countOrigRR));
     }
-
 
     public boolean isReady() {
         return ready;
