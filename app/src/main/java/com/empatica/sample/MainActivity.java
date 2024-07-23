@@ -13,6 +13,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,8 @@ import com.empatica.empalink.delegate.EmpaStatusDelegate;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements EmpaDataDelegate, EmpaStatusDelegate {
 
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements EmpaDataDelegate,
 
     private BloodPressureDBHelper bloodPressureDBHelper; // Add instance of BloodPressureDBHelper
 
+    private Timer bloodPressureTimer; // Timer for scheduling blood pressure updates
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,19 +100,51 @@ public class MainActivity extends AppCompatActivity implements EmpaDataDelegate,
         dataCnt = findViewById(R.id.dataArea);
 
         final Button connectButton = findViewById(R.id.connectButton);
-        connectButton.setOnClickListener(v -> toggleConnection());
+        connectButton.setOnClickListener(v -> showAgeInputDialog());
 
         Button showChartButton = findViewById(R.id.show_chart_button);
         showChartButton.setOnClickListener(v -> showChart());
 
         heartRateCalculator = new HeartRateCalculator();
         respiratoryRateCalculator = new RespiratoryRateCalculator();
-        bloodPressureCalculator = new BloodPressureCalculator();
+        bloodPressureCalculator = new BloodPressureCalculator(this); // Initialize with context only
         bloodPressureDBHelper = new BloodPressureDBHelper(MainActivity.this); // Initialize BloodPressureDBHelper
 
         checkPermissionsAndInitialize();
         Intent intent = new Intent(this, BluetoothService.class);
         startService(intent); // Ensure the service is running even if the activity is not bound
+
+        // Schedule blood pressure updates every 5 seconds
+        bloodPressureTimer = new Timer();
+        bloodPressureTimer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(() -> updateBloodPressure());
+            }
+        }, 0, 5000);
+    }
+
+    private void showAgeInputDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Enter your age");
+
+        final EditText input = new EditText(this);
+        builder.setView(input);
+
+        builder.setPositiveButton("OK", (dialog, which) -> {
+            try {
+                int age = Integer.parseInt(input.getText().toString());
+                bloodPressureCalculator.setUserAge(age); // Set the age in BloodPressureCalculator
+                toggleConnection(); // Proceed to toggle connection after age is input
+            } catch (NumberFormatException e) {
+                Log.e(TAG, "Invalid age input", e);
+                Toast.makeText(MainActivity.this, "Please enter a valid age", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+
+        builder.show();
     }
 
     private void toggleConnection() {
@@ -164,6 +200,11 @@ public class MainActivity extends AppCompatActivity implements EmpaDataDelegate,
     }
 
     private void showChart() {
+        Log.d(TAG, "HRData size: " + hrData.size());
+        Log.d(TAG, "RespirationData size: " + respirationData.size());
+        Log.d(TAG, "SystolicBPData size: " + systolicBPData.size());
+        Log.d(TAG, "DiastolicBPData size: " + diastolicBPData.size());
+
         Intent intent = new Intent(MainActivity.this, HeartRateChartActivity.class);
         intent.putExtra("HRData", (Serializable) hrData);
         intent.putExtra("RespirationData", (Serializable) respirationData);
@@ -242,6 +283,10 @@ public class MainActivity extends AppCompatActivity implements EmpaDataDelegate,
         if (deviceManager != null) {
             deviceManager.cleanUp();
         }
+        // Cancel the timer when the activity is destroyed
+        if (bloodPressureTimer != null) {
+            bloodPressureTimer.cancel();
+        }
     }
 
     @Override
@@ -285,7 +330,9 @@ public class MainActivity extends AppCompatActivity implements EmpaDataDelegate,
             // Update UI with respiratory rate
             updateLabel(respirationRateLabel, String.format("%.2f breaths/min", respiratoryRate));
         }
+    }
 
+    private void updateBloodPressure() {
         // Check if blood pressure calculator is ready to estimate blood pressure
         if (bloodPressureCalculator.isReady()) {
             // Get estimated blood pressure
@@ -300,6 +347,7 @@ public class MainActivity extends AppCompatActivity implements EmpaDataDelegate,
             updateBloodPressureUI(systolicBP, diastolicBP);
 
             // Save the blood pressure data to the database
+            double timestamp = System.currentTimeMillis() / 3000.0; // Current timestamp in seconds
             bloodPressureDBHelper.saveBloodPressure(timestamp, systolicBP, diastolicBP);
         }
     }
@@ -330,7 +378,6 @@ public class MainActivity extends AppCompatActivity implements EmpaDataDelegate,
         Log.d(TAG, "Battery level: " + battery * 100 + "% at timestamp: " + timestamp);
         updateLabel(batteryLabel, String.format("%.0f %%", battery * 100));
     }
-
 
     @Override
     public void didReceiveTag(double timestamp) {
