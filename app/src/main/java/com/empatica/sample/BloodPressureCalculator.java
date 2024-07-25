@@ -84,38 +84,104 @@ public class BloodPressureCalculator {
         }
     }
 
-
-    // Method to extract Points of Interest (PINs) from the BVP signal
-    private double[] extractPins(double[] ppgSignal) {
+  /*  // Method to extract Points of Interest (PINs) from the BVP signal
+    private double extractPins(double[] ppgSignal) {
+        // Lists to store systolic and diastolic points
         List<Double> systolicPoints = new ArrayList<>();
         List<Double> diastolicPoints = new ArrayList<>();
+
+        // Iterate over the signal to find systolic and diastolic points
         for (int i = 1; i < ppgSignal.length - 1; i++) {
+            // Identify systolic points (local maxima)
             if (ppgSignal[i] > ppgSignal[i - 1] && ppgSignal[i] > ppgSignal[i + 1]) {
                 systolicPoints.add(ppgSignal[i]);
             }
+            // Identify diastolic points (local minima)
             if (ppgSignal[i] < ppgSignal[i - 1] && ppgSignal[i] < ppgSignal[i + 1]) {
                 diastolicPoints.add(ppgSignal[i]);
             }
         }
+
         // Ensure equal number of points by truncating the longer list
         int size = Math.min(systolicPoints.size(), diastolicPoints.size());
         systolicPoints = systolicPoints.subList(0, size);
         diastolicPoints = diastolicPoints.subList(0, size);
 
-        return new double[]{median(systolicPoints), median(diastolicPoints)};
+        // Combine systolicPoints and diastolicPoints into a single list
+        List<Double> combinedPoints = new ArrayList<>(systolicPoints);
+        combinedPoints.addAll(diastolicPoints);
+
+        // Calculate and return the median of the combined list
+        return median(combinedPoints);
     }
 
-    // Utility method to calculate median
+    // Utility method to calculate the median of a list of numbers
     private double median(List<Double> data) {
+        // Get the size of the list
         int size = data.size();
+
+        // If the list is empty, return 0.0
         if (size == 0) return 0.0;
+
+        // Sort the list to arrange the values in ascending order
         data.sort(Double::compareTo);
+
+        // Calculate the median
         if (size % 2 == 0) {
+            // If even number of elements, return the average of the two middle elements
             return (data.get(size / 2 - 1) + data.get(size / 2)) / 2.0;
         } else {
+            // If odd number of elements, return the middle element
             return data.get(size / 2);
         }
     }
+*/
+
+
+    // Method to extract Points of Interest (PINs) from the BVP signal
+    private double[] extractPins(double[] ppgSignal) {
+        // Lists to store systolic and diastolic points
+        List<Double> systolicPoints = new ArrayList<>();
+        List<Double> diastolicPoints = new ArrayList<>();
+
+        // Iterate over the signal to find systolic and diastolic points
+        for (int i = 1; i < ppgSignal.length - 1; i++) {
+            // Identify systolic points (local maxima)
+            if (ppgSignal[i] > ppgSignal[i - 1] && ppgSignal[i] > ppgSignal[i + 1]) {
+                systolicPoints.add(ppgSignal[i]);
+            }
+            // Identify diastolic points (local minima)
+            if (ppgSignal[i] < ppgSignal[i - 1] && ppgSignal[i] < ppgSignal[i + 1]) {
+                diastolicPoints.add(ppgSignal[i]);
+            }
+        }
+
+        // Calculate and return the medians of the systolic and diastolic points
+        return new double[]{median(systolicPoints), median(diastolicPoints)};
+    }
+
+    // Utility method to calculate the median of a list of numbers
+    private double median(List<Double> data) {
+        // Get the size of the list
+        int size = data.size();
+
+        // If the list is empty, return 0.0
+        if (size == 0) return 0.0;
+
+        // Sort the list to arrange the values in ascending order
+        data.sort(Double::compareTo);
+
+        // Calculate the median
+        if (size % 2 == 0) {
+            // If even number of elements, return the average of the two middle elements
+            return (data.get(size / 2 - 1) + data.get(size / 2)) / 2.0;
+        } else {
+            // If odd number of elements, return the middle element
+            return data.get(size / 2);
+        }
+    }
+
+
 
     // Method to check if the calculator is ready for the next calculation
     public boolean isReady() {
