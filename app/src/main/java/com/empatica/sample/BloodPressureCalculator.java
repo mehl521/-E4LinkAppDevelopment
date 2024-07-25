@@ -84,7 +84,8 @@ public class BloodPressureCalculator {
         }
     }
 
-  /*  // Method to extract Points of Interest (PINs) from the BVP signal
+  /* x = med(sp+dp)  
+  // Method to extract Points of Interest (PINs) from the BVP signal
     private double extractPins(double[] ppgSignal) {
         // Lists to store systolic and diastolic points
         List<Double> systolicPoints = new ArrayList<>();
@@ -137,7 +138,7 @@ public class BloodPressureCalculator {
     }
 */
 
-
+//x = med(sp)+med(dp) 
     // Method to extract Points of Interest (PINs) from the BVP signal
     private double[] extractPins(double[] ppgSignal) {
         // Lists to store systolic and diastolic points
