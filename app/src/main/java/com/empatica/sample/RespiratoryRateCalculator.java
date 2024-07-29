@@ -187,7 +187,7 @@ public class RespiratoryRateCalculator {
     /**
      * Fuses multiple features to calculate the final respiratory rate.
      *
-     * @param am    amplitude modulation
+     * @param am    amplitude modulationzjuhju
      * @param bw    baseline wander
      * @param fm    frequency modulation
      * @param countOrigRR respiratory rate from count-orig method
