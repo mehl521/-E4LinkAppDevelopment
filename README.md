@@ -27,3 +27,5 @@ If you need any additional information about the Empatica API for Android, pleas
 [2]: http://developer.empatica.com
 
 ### Gradle
+
+Make sure you have the correct gradle versions and also the gradle plugin installed. You should have in your android studio a little elefant on the top right corner. If not go to settings > plugins to install the gradle.
