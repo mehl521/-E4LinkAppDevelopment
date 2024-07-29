@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements EmpaDataDelegate,
         showChartButton.setOnClickListener(v -> showChart());
 
         heartRateCalculator = new HeartRateCalculator();
-        respiratoryRateCalculator = new RespiratoryRateCalculator();
+        respiratoryRateCalculator = new RespiratoryRateCalculator();//Respration Rate Calculation
         bloodPressureCalculator = new BloodPressureCalculator(this); // Initialize with context only
         bloodPressureDBHelper = new BloodPressureDBHelper(MainActivity.this); // Initialize BloodPressureDBHelper
 
