@@ -25,3 +25,5 @@ If you need any additional information about the Empatica API for Android, pleas
 
 [1]: https://www.empatica.com/connect/developer.php
 [2]: http://developer.empatica.com
+
+### Gradle
